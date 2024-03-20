@@ -8,6 +8,8 @@ const bookRouter = express.Router();
 
 bookRouter.get("/",async (req,res)=>{
    try {
+    let params = {};
+    const {author, category} = req.body;
     if(author){
         params.author = author;
     }
